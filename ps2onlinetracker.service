@@ -1,0 +1,14 @@
+[Unit]
+Description=Planetside 2 Online Tracker
+
+[Service]
+Type=simple
+Environment=DB_CONN=postgres://USER:PASSWORD@localhost/DATABASE?sslmode=disable
+Environment=SERVICE_ID=YOURID
+Environment=METRICS_LISTEN=localhost:8080
+ExecStart=/PATH/TO/ps2onlinetracker
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
