@@ -30,7 +30,7 @@ func main() {
 		log.Fatalln(err)
 	}
 	go func() {
-		err := consum.ConsumeLogins()
+		err := consum.Consume()
 		if err != nil {
 			log.Fatalln("Consumer error: ", err)
 		}
