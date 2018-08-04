@@ -78,7 +78,6 @@ func (s *Streamer) Listen() {
 		for {
 			_, r, err = conn.ReadMessage()
 			if err != nil {
-				fmt.Println(err)
 				break
 			}
 			s.Queue <- r
